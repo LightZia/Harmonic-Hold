@@ -1,0 +1,9 @@
+:root{
+    --theme-button-color: #5E3558;
+    --theme-expanding-button-color: #D88C9A;
+    --background-color: #004225;
+    --text-font: Almendra Display;
+    --text-size: 1.5vw
+    --cover-effect: 0 0 40px 10px rgba(200, 255, 200, 0.5), inset 0 0 20px rgba(180, 255, 180, 0.4);
+    --button-effect: 0.3vw 0.3vw 0.6vw rgba(15, 30, 8, 0.8), -0.3vw -0.3vw 0.6vw rgba(200, 255, 200, 0.3), inset -0.3vw -0.3vw 0.6vw rgba(255, 255, 255, 0.5), inset 0.3vw 0.3vw 0.6vw rgba(66, 20, 69, 0.5);
+}

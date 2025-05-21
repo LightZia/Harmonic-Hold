@@ -1,0 +1,9 @@
+:root{
+    --theme-button-color: #36454F;
+    --theme-expanding-button-color: #D4AF37;
+    --background-color: #2A0202;
+    --text-font: Imperial Script;
+    --text-size: 2vw;
+    --cover-effect: 0 0 40px 10px rgba(255, 50, 50, 0.6), inset 0 0 20px rgba(255, 0, 0, 0.5);
+    --button-effect: 0.3vw 0.3vw 0.6vw rgba(0, 0, 0, 0.9), -0.3vw -0.3vw 0.6vw rgba(255, 100, 100, 0.3), inset -0.3vw -0.3vw 0.6vw rgba(255, 255, 255, 0.5), inset 0.3vw 0.3vw 0.6vw rgba(65, 53, 27, 0.5);
+}

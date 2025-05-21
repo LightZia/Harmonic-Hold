@@ -1,0 +1,295 @@
+/* Basic styles for the music player */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #0A0A0A;
+    color: #fff;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+:root{
+    --theme-button-color: #142727;
+    --theme-expanding-button-color: #E5E4E2;
+    --background-color: #0A0A0A;
+    --text-font: Poiret One;
+    --text-size: 1.5vw;
+    --cover-effect: 0 0 50px 20px rgba(52, 152, 219, 0.3), inset 0 0 20px rgba(255,255,255,0.1);
+    --button-effect: 0.3vw 0.3vw 0.6vw rgba(0, 0, 0, 0.9), -0.3vw -0.3vw 0.6vw rgba(255, 255, 255, 0.2), inset -0.3vw -0.3vw 0.6vw rgba(255, 255, 255, 0.2), inset 0.3vw 0.3vw 0.6vw rgba(17, 15, 15, 0.5);
+}
+.player{
+    position: absolute;
+    width: 83vw;
+    height: auto;
+    background-color: rgba(0, 0, 0, 0.2);
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.9) ;
+    z-index: 1;
+    border-radius: 2vw;
+    padding: 2%;
+    scale: 1.1;
+    top: 10%;
+}
+.toggle{
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 5%;
+    right: 3%;
+}
+
+.menu-bar{
+    position: absolute;
+    height: 100vh;
+    width: 40%;
+    background-color: #ffffff3e;
+    left: 0;
+    z-index: 2;
+    border-top-right-radius: 30px;
+    backdrop-filter: blur(9px);
+    box-shadow: 3px 8px 10px 2px #0000009c;
+    transform: translateX(-100%);
+}
+#cross img{
+    /* background: #000; */
+    height: 3vw;
+    width: 3vw;
+    margin: 5%;
+    cursor: pointer;
+    user-select: none;
+}
+.menu-icon svg{
+    position: absolute;
+    fill: #E5E4E2;
+    left: 0;
+    top: 1%;
+    margin: 3%;
+    width: 5vw;
+    height: auto;
+    cursor: pointer;
+    z-index: 2;
+}
+.player-container{
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width: auto;
+    padding: 8%;
+}
+.line-ctrl{
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.ctrl{
+    position: relative;
+    justify-content: center;
+    gap: 3%;
+    display: flex;
+    align-items: center;
+    padding: 1%;
+    width: auto;
+    margin: auto;
+}
+.song-details{
+    padding-block: 01%;
+    justify-content: space-between;
+    font-family: var(--text-font);
+}
+
+.bcirc {
+    width: 4vw;  /* Width is 20% of the viewport width */
+    height: 4vw; /* Height is 20% of the viewport width to keep it square */
+    background-color: var(--theme-expanding-button-color);
+    border-radius: 50%; /* Makes it a circle */
+    top: -15%;
+    right: -45%;
+    position: inherit;
+    opacity: 1;
+    box-shadow: inset, 0.8vw, 0.9vw rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: left;
+    z-index: 4;
+}
+.circ{
+    width: 2.5vw;  /* Width is 20% of the viewport width */
+    height: 2.5vw; /* Height is 20% of the viewport width to keep it square */
+    background-color: var(--theme-button-color);
+    border-radius: 50%; /* Makes it a circle */
+    box-shadow: -0.1vw 0vw 0.3vw 0.1vw rgba(0, 0, 0, 0.8);
+    position: relative;
+    top: 0.36vw;
+    right: -17%;
+    cursor: pointer;
+    z-index: 5;
+}
+
+.text{
+    position: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 1.3vw;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    user-select: none;
+    top: 22%;
+    right: 1%;
+}
+.btext{
+    color: #0A0A0A;
+    overflow: hidden;
+    margin-left: 10%;
+    font-family: var(--text-font);
+    font-weight: bold;
+    letter-spacing: 0.1vw;
+    font-size: var(--text-size);
+    user-select: none;
+    opacity: 0;
+}
+
+.cover{
+    position: relative;
+    width: 280px;
+    height: 280px;
+    background-image: url('Cover/Fall\ on\ Grass.jpg');
+    background-size: cover;
+    background-color: var(--theme-button-color);
+    border-radius: 10%;
+    box-shadow: 0.9vw 0.5vw 1.2vw 0.2vw rgba(0, 0, 0, 0.4);
+    opacity: 1;
+}
+.cover-border{
+    position: relative;
+    width: 280px;
+    height: 280px;
+    /* background-color: #fff; */
+    border-color: #ffffff;
+    border-style: double;
+    opacity: 1;
+    border-radius: 10%;
+    box-shadow: var(--cover-effect);
+}
+
+.more{
+    position: relative;
+    top: 2px;
+    cursor: pointer;
+}
+.bwd{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--theme-expanding-button-color);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    opacity: 0.7;
+    box-shadow: var(--button-effect);
+}
+.play{
+    position: relative;
+    background-color: #E5E4E2;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    opacity: 0.7;
+    box-shadow: var(--button-effect);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.fwd{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #E5E4E2;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    opacity: 0.7;
+    box-shadow: var(--button-effect);
+}
+.volume{
+    position: relative;
+    top: 2px;
+    cursor: pointer;
+}
+
+#current-sec{
+    position: relative;
+    font-family: 'Poiret One', sans-serif;
+    font-size: 80%;
+    left: 1%;
+    user-select: none;
+}
+.line{
+    position: relative;
+    height: 9px;
+    width: 100%;
+    border-radius: 20vw;
+    background-color: #e5e4e267;
+    scale: 0.9;
+    cursor: pointer;
+    overflow:hidden;
+}
+#progress-bar{
+    width: 30%;
+    background-color: #222222;
+    height: 10px;
+}
+#duration-sec{
+    position: relative;
+    font-family: 'Poiret One', sans-serif;
+    font-size: 80%;
+    right: 1%;
+    user-select: none;
+}
+
+.play svg{
+    fill: #0A0A0A;
+}
+.play svg:nth-child(2){
+    fill: #0A0A0A;
+
+}
+.fwd svg{
+    fill: #0A0A0A;
+}
+.bwd svg{
+    fill: #0A0A0A;
+}
+
+.title{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    font-size: 250%;
+}
+
+.author{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    font-size: 100%;
+}
+
+#pause-icon{
+    display: none;
+}
