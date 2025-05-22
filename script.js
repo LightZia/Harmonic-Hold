@@ -21,8 +21,10 @@ const durationSec = document.getElementById('duration-sec')
 const playSVG = document.getElementById('play-icon')
 const pauseSVG = document.getElementById('pause-icon')
 const menuBar = document.querySelector('.menu-bar')
-const close = document.getElementById('cross')
+const closeIcon = document.getElementById('cross')
 const menuIcon = document.querySelector('.menu-icon')
+const moreIcon = document.querySelector('.more')
+const morePanel = document.getElementById('more-panel')
 
 const downSrc = 'down.mp3';
 const upSrc = 'up.mp3';
@@ -240,7 +242,7 @@ bwd.addEventListener('mouseleave', () => {
     bwd.style.opacity = 0.7;
 })
 
-close.addEventListener('click', () => {
+closeIcon.addEventListener('click', () => {
     menuBar.style.transition = 'transform 0.5s ease'
     menuBar.style.transform = 'translateX(-100%)'
 })
@@ -248,4 +250,13 @@ close.addEventListener('click', () => {
 menuIcon.addEventListener('click', () => {
     menuBar.style.transition = 'transform 0.5s ease'
     menuBar.style.transform = 'translateX(0%)'
+})
+
+moreIcon.addEventListener('click', () => {
+    if(morePanel.style.display === "none"){
+        morePanel.style.display === "block";
+    }
+    else{
+        morePanel.style.display === "none";
+    }
 })
