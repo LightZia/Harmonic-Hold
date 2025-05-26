@@ -23,8 +23,10 @@ const pauseSVG = document.getElementById('pause-icon')
 const menuBar = document.querySelector('.menu-bar')
 const closeIcon = document.getElementById('cross')
 const menuIcon = document.querySelector('.menu-icon')
-const moreIcon = document.querySelector('.more')
+const moreIcon = document.querySelector('.more svg')
 const morePanel = document.getElementById('more-panel')
+const volume = document.querySelector('.volume svg')
+const volumeBar = document.getElementById('volume-bar')
 
 const downSrc = 'down.mp3';
 const upSrc = 'up.mp3';
@@ -253,10 +255,20 @@ menuIcon.addEventListener('click', () => {
 })
 
 moreIcon.addEventListener('click', () => {
-    if(morePanel.style.display === "none"){
-        morePanel.style.display === "block";
+    if(morePanel.style.display === "flex"){
+        morePanel.style.display = "none";
     }
     else{
-        morePanel.style.display === "none";
+        morePanel.style.display = "flex";
+    }
+    morePanel.style.transition = 'opacity 0.4'
+})
+
+volume.addEventListener('click', () => {
+    if(volumeBar.style.display === "flex"){
+        volumeBar.style.display = "none";
+    }
+    else{
+        volumeBar.style.display = "flex"
     }
 })

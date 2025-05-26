@@ -57,12 +57,14 @@ body {
     cursor: pointer;
     user-select: none;
 }
-.menu-icon svg{
+.menu-icon {
     position: absolute;
-    fill: #E5E4E2;
     left: 0;
-    top: 0.8%;
-    margin: 3%;
+    top: 5%;
+    margin-left: 3%;
+}
+.menu-icon svg{
+    fill: #E5E4E2;
     width: 3vw;
     height: auto;
     cursor: pointer;
@@ -248,11 +250,13 @@ body {
     scale: 0.9;
     cursor: pointer;
     overflow:hidden;
+    user-select: none;
 }
 #progress-bar{
     width: 30%;
     background-color: #222222;
     height: 10px;
+    user-select: none;
 }
 #duration-sec{
     position: relative;
@@ -305,5 +309,19 @@ body {
     justify-content: center;
     bottom: 10%;
     backdrop-filter: blur(7px);
+    z-index: 3;
+}
+
+#volume-bar{
+    position: absolute;
+    background: #ffffff9b;
+    width: 22px;
+    height: 140px;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    bottom: 120%;
+    backdrop-filter: blur(7px);
+    display: none;
     z-index: 3;
 }
